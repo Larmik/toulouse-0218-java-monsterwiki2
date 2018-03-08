@@ -9,28 +9,43 @@
     <ListView
         android:id="@+id/liste"
         android:layout_width="368dp"
-        android:layout_height="454dp"
+        android:layout_height="403dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/background_app"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/type_list" />
+        app:layout_constraintTop_toBottomOf="@+id/type_list_2" />
 
     <Spinner
-        android:id="@+id/type_list"
+        android:id="@+id/type_list_1"
         android:layout_width="348dp"
         android:layout_height="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:entries="@array/monster_list"
         android:prompt="@string/filter"
         android:spinnerMode="dialog"
-        app:layout_constraintBottom_toTopOf="@+id/liste"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/type_list_2"
+        android:layout_width="348dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/monster_list"
+        android:prompt="@string/filter"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_list_1" />
 
 </android.support.constraint.ConstraintLayout>
