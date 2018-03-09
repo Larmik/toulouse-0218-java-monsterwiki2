@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WikiMob Monster Legends</string>
+    <string name="filter">Type/Element :</string>
+    <string name="textview">TextView</string>
 </resources>

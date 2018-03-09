@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="monster_list">
+        <item>Fire</item>
+        <item>Nature</item>
+        <item>Thunder</item>
+        <item>Earth</item>
+        <item>Water</item>
+        <item>Legend</item>
+        <item>Dark</item>
+        <item>Magic</item>
+        <item>Light</item>
+        <item>Metal</item>
+    </string-array>
+</resources>
