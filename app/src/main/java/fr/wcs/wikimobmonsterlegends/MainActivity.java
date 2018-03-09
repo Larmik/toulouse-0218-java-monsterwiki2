@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Spinner;
+
 import java.util.ArrayList;
 
 
@@ -63,10 +65,10 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.arch_knight_egg,
                 R.drawable.light_spirit_egg,
                 R.drawable.genie_egg,
-                R.drawable.tyrannoking_egg ,
-                R.drawable.turtle_egg ,
-                R.drawable.roquillaegg ,
-                R.drawable.panda_egg };
+                R.drawable.tyrannoking_egg,
+                R.drawable.turtle_egg,
+                R.drawable.roquillaegg,
+                R.drawable.panda_egg};
 
 
         final int[] weakness = {R.drawable.water,
@@ -95,6 +97,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+/**
+        final Spinner filtre1 = findViewById(R.id.type_list_1);
+        final Spinner filtre2 = findViewById(R.id.type_list_2);
+
+
+        filtre1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                ArrayList<MonsterModel> filterList = new ArrayList<>();
+
+                for (int i = 0; i < 10; i++) {
+                    int typeCondition
+
+                    if (monsterInfo.contains(R.drawable.fire)) {
+                        filterList.add(monsterInfo);
+                    }
+                }
+
+                final ListAdapter filterAdapter = new ListAdapter(this, filterList);
+                listMonsters.setAdapter(filterAdapter);
+
+            }
+
+        });**/
     }
 }
-
