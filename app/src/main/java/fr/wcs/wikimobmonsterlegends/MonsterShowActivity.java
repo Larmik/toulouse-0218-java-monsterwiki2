@@ -14,11 +14,13 @@ public class MonsterShowActivity extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monster_show);
 
+        //Récupération des vues
         TextView monsterName = findViewById(R.id.monster_name);
         ImageView typePicture = findViewById(R.id.type_picture);
         ImageView monsterPicture = findViewById(R.id.monster_picture);
         ImageView weaknessPicture = findViewById(R.id.weakness_picture);
 
+        //Liste sur écran d'accueil (database)
         ArrayList<MonsterPage> datas = new ArrayList<>();
         datas.add(new MonsterPage("Fire Lion", 50, 220, 175, 100, R.drawable.firelion0, R.drawable.fire));
         datas.add(new MonsterPage("Thunder Eagle", 50, 175, 250, 100, R.drawable.thunder_eagle_0, R.drawable.thunder));
@@ -32,6 +34,7 @@ public class MonsterShowActivity extends MainActivity {
         datas.add(new MonsterPage("Panda", 56, 190, 200, 100, R.drawable.panda_0, R.drawable.nature));
 
 
+        // Intent/Extra sur MonsterShowActivity
         Intent fromMain = getIntent();
         monsterName.setText(fromMain.getStringExtra("name"));
         typePicture.setImageResource(fromMain.getIntExtra("type", 0));
