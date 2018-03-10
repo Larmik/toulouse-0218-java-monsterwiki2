@@ -97,9 +97,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-/**
-        final Spinner filtre1 = findViewById(R.id.type_list_1);
-        final Spinner filtre2 = findViewById(R.id.type_list_2);
+
+       /** final Spinner filtre1 = findViewById(R.id.type_list_1);
 
 
         filtre1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -123,6 +122,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+
+            }
         });**/
+
+
+
+
+
     }
 }
