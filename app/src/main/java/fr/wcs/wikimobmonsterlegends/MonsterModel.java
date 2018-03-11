@@ -5,22 +5,13 @@ import android.graphics.drawable.Drawable;
 
 public class MonsterModel {
 
-    private int rank;
+
     private String name;
     private int image;
 
-    public MonsterModel(int rank, String name, int image) {
-        this.rank = rank;
+    public MonsterModel(String name, int image) {
         this.name = name;
         this.image = image;
-    }
-
-    public int getRank() {
-        return rank;
-    }
-
-    public void setRank(int rank) {
-        this.rank = rank;
     }
 
     public String getName() {
