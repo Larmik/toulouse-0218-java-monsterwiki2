@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
-                final ListAdapter filterAdapter = new ListAdapter(this, filterList);
+                final ListAdapter filterAdapter = new ListAdapter(this, filterList)
                 listMonsters.setAdapter(filterAdapter);
 
             }
