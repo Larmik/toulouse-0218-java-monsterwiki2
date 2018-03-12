@@ -1,8 +1,6 @@
 package fr.wcs.wikimobmonsterlegends;
 
 
-import android.graphics.drawable.Drawable;
-
 public class MonsterModel {
 
     private String name;
