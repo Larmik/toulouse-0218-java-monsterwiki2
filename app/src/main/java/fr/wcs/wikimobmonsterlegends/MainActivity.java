@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Spinner;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -168,9 +170,51 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(intent);
 
 
+
             }
         });
 
+        final Spinner filtre1 = findViewById(R.id.type_list_1);
+
+        final ArrayList<MonsterModel> filterList = new ArrayList<>();
+
+        final ListAdapter filterAdapter = new ListAdapter(this, filterList);
+
+
+        filtre1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if (position == 0){
+
+                    listMonsters.setAdapter(adapter);
+
+                }
+                else {
+
+                    for (int i = 0; i < monsterInfo.size(); i++) {
+
+                        if (getResources().getResourceEntryName(monsterInfo.get(i).getImage()).toLowerCase().contains(filtre1.getSelectedItem().toString().toLowerCase())) {
+
+                            filterList.clear();
+                            filterList.add(monsterInfo.get(i));
+
+                        }
+                    }
+
+                    listMonsters.setAdapter(filterAdapter);
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+
+        });
 
     }
 }
