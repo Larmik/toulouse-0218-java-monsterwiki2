@@ -1,6 +1,5 @@
 package fr.wcs.wikimobmonsterlegends;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,7 +40,9 @@ public class MonsterShowActivity extends MainActivity {
 
     public void updateData(int mLevel) {
         ImageView typePicture = findViewById(R.id.type_picture);
+        ImageView typePicture2 = findViewById(R.id.type_picture_2);
         ImageView weaknessPicture = findViewById(R.id.weakness_picture);
+        ImageView weaknessPicture2 = findViewById(R.id.weakness_picture_2);
         Button previousEv = findViewById(R.id.btn_previous);
         Button nextEv = findViewById(R.id.btn_next);
 
@@ -58,8 +59,10 @@ public class MonsterShowActivity extends MainActivity {
             MonsterModel toEgg = getIntent().getParcelableExtra("EXTRA_PARCEL_EGG");
             monsterName.setText(toEgg.getName());
             typePicture.setImageResource(toEgg.getType());
+            typePicture2.setImageResource(toEgg.getWeakness());
             monsterPicture.setImageResource(toEgg.getImage());
-            weaknessPicture.setImageResource(toEgg.getWeakness());
+            weaknessPicture.setImageResource(toEgg.getType2());
+            weaknessPicture2.setImageResource(toEgg.getWeakness2());
             healthStat.setText(String.valueOf(toEgg.getStatHealth()));
             powerStat.setText(String.valueOf(toEgg.getStatPower()));
             speedStat.setText(String.valueOf(toEgg.getStatSpeed()));
@@ -72,8 +75,10 @@ public class MonsterShowActivity extends MainActivity {
             MonsterModel toChild = getIntent().getParcelableExtra("EXTRA_PARCEL_CHILD");
             monsterName.setText(toChild.getName());
             typePicture.setImageResource(toChild.getType());
+            typePicture2.setImageResource(toChild.getType2());
             monsterPicture.setImageResource(toChild.getImage());
             weaknessPicture.setImageResource(toChild.getWeakness());
+            weaknessPicture2.setImageResource(toChild.getWeakness2());
             healthStat.setText(String.valueOf(toChild.getStatHealth()));
             powerStat.setText(String.valueOf(toChild.getStatPower()));
             speedStat.setText(String.valueOf(toChild.getStatSpeed()));
@@ -86,8 +91,10 @@ public class MonsterShowActivity extends MainActivity {
             MonsterModel toJuv = getIntent().getParcelableExtra("EXTRA_PARCEL_JUV");
             monsterName.setText(toJuv.getName());
             typePicture.setImageResource(toJuv.getType());
+            typePicture2.setImageResource(toJuv.getType2());
             monsterPicture.setImageResource(toJuv.getImage());
             weaknessPicture.setImageResource(toJuv.getWeakness());
+            weaknessPicture2.setImageResource(toJuv.getWeakness2());
             healthStat.setText(String.valueOf(toJuv.getStatHealth()));
             powerStat.setText(String.valueOf(toJuv.getStatPower()));
             speedStat.setText(String.valueOf(toJuv.getStatSpeed()));
@@ -100,8 +107,10 @@ public class MonsterShowActivity extends MainActivity {
             MonsterModel toAdult = getIntent().getParcelableExtra("EXTRA_PARCEL_ADULT");
             monsterName.setText(toAdult.getName());
             typePicture.setImageResource(toAdult.getType());
+            typePicture2.setImageResource(toAdult.getType2());
             monsterPicture.setImageResource(toAdult.getImage());
             weaknessPicture.setImageResource(toAdult.getWeakness());
+            weaknessPicture2.setImageResource(toAdult.getWeakness2());
             healthStat.setText(String.valueOf(toAdult.getStatHealth()));
             powerStat.setText(String.valueOf(toAdult.getStatPower()));
             speedStat.setText(String.valueOf(toAdult.getStatSpeed()));
