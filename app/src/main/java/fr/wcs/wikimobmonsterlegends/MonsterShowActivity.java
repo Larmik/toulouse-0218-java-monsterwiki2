@@ -37,7 +37,6 @@ public class MonsterShowActivity extends MainActivity {
             }
         });
 
-
     }
 
     public void updateData(int mLevel) {
@@ -46,7 +45,6 @@ public class MonsterShowActivity extends MainActivity {
         Button previousEv = findViewById(R.id.btn_previous);
         Button nextEv = findViewById(R.id.btn_next);
 
-        final Intent fromMain = getIntent();
         final TextView monsterName = findViewById(R.id.monster_name);
         final ImageView monsterPicture = findViewById(R.id.monster_picture);
         final TextView healthStat = findViewById(R.id.stat_health);
@@ -57,53 +55,57 @@ public class MonsterShowActivity extends MainActivity {
 
         switch (mLevel) {
         case 0 :
-            monsterName.setText(fromMain.getStringExtra("name"));
-            typePicture.setImageResource(fromMain.getIntExtra("type", 0));
-            monsterPicture.setImageResource(fromMain.getIntExtra("picture_egg", 0));
-            weaknessPicture.setImageResource(fromMain.getIntExtra("weakness", 0));
-            healthStat.setText(String.valueOf(fromMain.getIntExtra("health0", 0)));
-            powerStat.setText(String.valueOf(fromMain.getIntExtra("power0", 0)));
-            speedStat.setText(String.valueOf(fromMain.getIntExtra("speed0", 0)));
-            staminaStat.setText(String.valueOf(fromMain.getIntExtra("stamina0", 0)));
+            MonsterModel toEgg = getIntent().getParcelableExtra("EXTRA_PARCEL_EGG");
+            monsterName.setText(toEgg.getName());
+            typePicture.setImageResource(toEgg.getType());
+            monsterPicture.setImageResource(toEgg.getImage());
+            weaknessPicture.setImageResource(toEgg.getWeakness());
+            healthStat.setText(String.valueOf(toEgg.getStatHealth()));
+            powerStat.setText(String.valueOf(toEgg.getStatPower()));
+            speedStat.setText(String.valueOf(toEgg.getStatSpeed()));
+            staminaStat.setText(String.valueOf(toEgg.getStatStamina()));
             monsterAge.setText(R.string.egg);
             previousEv.setVisibility(View.INVISIBLE);
             nextEv.setVisibility(View.VISIBLE);
             break;
         case 1 :
-            monsterName.setText(fromMain.getStringExtra("name"));
-            typePicture.setImageResource(fromMain.getIntExtra("type", 0));
-            monsterPicture.setImageResource(fromMain.getIntExtra("picture_child", 0));
-            weaknessPicture.setImageResource(fromMain.getIntExtra("weakness", 0));
-            healthStat.setText(String.valueOf(fromMain.getIntExtra("health1", 0)));
-            powerStat.setText(String.valueOf(fromMain.getIntExtra("power1", 0)));
-            speedStat.setText(String.valueOf(fromMain.getIntExtra("speed1", 0)));
-            staminaStat.setText(String.valueOf(fromMain.getIntExtra("stamina1", 0)));
+            MonsterModel toChild = getIntent().getParcelableExtra("EXTRA_PARCEL_CHILD");
+            monsterName.setText(toChild.getName());
+            typePicture.setImageResource(toChild.getType());
+            monsterPicture.setImageResource(toChild.getImage());
+            weaknessPicture.setImageResource(toChild.getWeakness());
+            healthStat.setText(String.valueOf(toChild.getStatHealth()));
+            powerStat.setText(String.valueOf(toChild.getStatPower()));
+            speedStat.setText(String.valueOf(toChild.getStatSpeed()));
+            staminaStat.setText(String.valueOf(toChild.getStatStamina()));
             monsterAge.setText(R.string.child);
             previousEv.setVisibility(View.VISIBLE);
             nextEv.setVisibility(View.VISIBLE);
             break;
         case 2 :
-            monsterName.setText(fromMain.getStringExtra("name"));
-            typePicture.setImageResource(fromMain.getIntExtra("type", 0));
-            monsterPicture.setImageResource(fromMain.getIntExtra("picture_juv", 0));
-            weaknessPicture.setImageResource(fromMain.getIntExtra("weakness", 0));
-            healthStat.setText(String.valueOf(fromMain.getIntExtra("health4", 0)));
-            powerStat.setText(String.valueOf(fromMain.getIntExtra("power4", 0)));
-            speedStat.setText(String.valueOf(fromMain.getIntExtra("speed4", 0)));
-            staminaStat.setText(String.valueOf(fromMain.getIntExtra("stamina4", 0)));
+            MonsterModel toJuv = getIntent().getParcelableExtra("EXTRA_PARCEL_JUV");
+            monsterName.setText(toJuv.getName());
+            typePicture.setImageResource(toJuv.getType());
+            monsterPicture.setImageResource(toJuv.getImage());
+            weaknessPicture.setImageResource(toJuv.getWeakness());
+            healthStat.setText(String.valueOf(toJuv.getStatHealth()));
+            powerStat.setText(String.valueOf(toJuv.getStatPower()));
+            speedStat.setText(String.valueOf(toJuv.getStatSpeed()));
+            staminaStat.setText(String.valueOf(toJuv.getStatStamina()));
             monsterAge.setText(R.string.juv);
             previousEv.setVisibility(View.VISIBLE);
             nextEv.setVisibility(View.VISIBLE);
             break;
         case 3 :
-            monsterName.setText(fromMain.getStringExtra("name"));
-            typePicture.setImageResource(fromMain.getIntExtra("type", 0));
-            monsterPicture.setImageResource(fromMain.getIntExtra("picture_adult", 0));
-            weaknessPicture.setImageResource(fromMain.getIntExtra("weakness", 0));
-            healthStat.setText(String.valueOf(fromMain.getIntExtra("health7", 0)));
-            powerStat.setText(String.valueOf(fromMain.getIntExtra("power7", 0)));
-            speedStat.setText(String.valueOf(fromMain.getIntExtra("speed7", 0)));
-            staminaStat.setText(String.valueOf(fromMain.getIntExtra("stamina7", 0)));
+            MonsterModel toAdult = getIntent().getParcelableExtra("EXTRA_PARCEL_ADULT");
+            monsterName.setText(toAdult.getName());
+            typePicture.setImageResource(toAdult.getType());
+            monsterPicture.setImageResource(toAdult.getImage());
+            weaknessPicture.setImageResource(toAdult.getWeakness());
+            healthStat.setText(String.valueOf(toAdult.getStatHealth()));
+            powerStat.setText(String.valueOf(toAdult.getStatPower()));
+            speedStat.setText(String.valueOf(toAdult.getStatSpeed()));
+            staminaStat.setText(String.valueOf(toAdult.getStatStamina()));
             monsterAge.setText(R.string.adult);
             previousEv.setVisibility(View.VISIBLE);
             nextEv.setVisibility(View.INVISIBLE);
