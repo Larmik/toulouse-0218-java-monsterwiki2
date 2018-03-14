@@ -2,4 +2,8 @@
     <string name="app_name">WikiMob Monster Legends</string>
     <string name="filter">Type/Element :</string>
     <string name="textview">TextView</string>
+    <string name="juv">Juvenile</string>
+    <string name="egg">Egg</string>
+    <string name="child">Child</string>
+    <string name="adult">Adult</string>
 </resources>

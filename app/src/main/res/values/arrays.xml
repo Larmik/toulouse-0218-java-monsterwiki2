@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="monster_list">
+        <item>Choose an element</item>
         <item>Fire</item>
         <item>Nature</item>
         <item>Thunder</item>

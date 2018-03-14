@@ -27,7 +27,7 @@ public class ListAdapter extends ArrayAdapter<MonsterModel> {
         ImageView monsterImage = convertView.findViewById(R.id.monster_picture);
 
         monsterName.setText(monster.getName());
-        monsterImage.setImageResource(monster.getImage());
+        monsterImage.setImageResource(monster.getType());
 
         return convertView;
 
