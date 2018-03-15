@@ -1,6 +1,7 @@
 package fr.wcs.wikimobmonsterlegends;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +26,11 @@ public class ListAdapter extends ArrayAdapter<MonsterModel> {
 
         TextView monsterName = convertView.findViewById(R.id.monster_name);
         ImageView monsterImage = convertView.findViewById(R.id.monster_picture);
+        ImageView monsterImage2 = convertView.findViewById(R.id.monster_picture_2);
 
         monsterName.setText(monster.getName());
-        monsterImage.setImageResource(monster.getImage());
+        monsterImage.setImageResource(monster.getType());
+        monsterImage2.setImageResource(monster.getType2());
 
         return convertView;
 
