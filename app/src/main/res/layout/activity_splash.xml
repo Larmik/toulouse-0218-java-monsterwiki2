@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="fr.wcs.wikimobmonsterlegends.SplashActivity">
+
+    <ImageView
+        android:id="@+id/imageViewRose"
+        android:layout_width="155dp"
+        android:layout_height="192dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewGenie"
+        app:srcCompat="@drawable/rosana" />
+
+    <ImageView
+        android:id="@+id/imageViewFenix"
+        android:layout_width="87dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fenix" />
+
+    <ImageView
+        android:id="@+id/imageViewGenie"
+        android:layout_width="94dp"
+        android:layout_height="117dp"
+        android:layout_marginBottom="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTitre"
+        app:srcCompat="@drawable/genie_1" />
+
+    <ImageView
+        android:id="@+id/imageViewTitre"
+        android:layout_width="351dp"
+        android:layout_height="149dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFenix"
+        app:layout_constraintVertical_bias="0.003"
+        app:srcCompat="@drawable/titre_sansfond" />
+
+</android.support.constraint.ConstraintLayout>
