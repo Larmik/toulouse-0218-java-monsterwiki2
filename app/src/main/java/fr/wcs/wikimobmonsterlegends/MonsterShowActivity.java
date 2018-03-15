@@ -3,6 +3,7 @@ package fr.wcs.wikimobmonsterlegends;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,8 +19,8 @@ public class MonsterShowActivity extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monster_show);
 
-        Button previousEv = findViewById(R.id.btn_previous);
-        Button nextEv = findViewById(R.id.btn_next);
+        ImageButton previousEv = findViewById(R.id.btn_previous);
+        ImageButton nextEv = findViewById(R.id.btn_next);
         updateData(mLevel);
 
         //Clic sur les boutons
@@ -43,8 +44,8 @@ public class MonsterShowActivity extends MainActivity {
         ImageView typePicture2 = findViewById(R.id.type_picture_2);
         ImageView weaknessPicture = findViewById(R.id.weakness_picture);
         ImageView weaknessPicture2 = findViewById(R.id.weakness_picture_2);
-        Button previousEv = findViewById(R.id.btn_previous);
-        Button nextEv = findViewById(R.id.btn_next);
+        ImageButton previousEv = findViewById(R.id.btn_previous);
+        ImageButton nextEv = findViewById(R.id.btn_next);
 
         final TextView monsterName = findViewById(R.id.monster_name);
         final ImageView monsterPicture = findViewById(R.id.monster_picture);
