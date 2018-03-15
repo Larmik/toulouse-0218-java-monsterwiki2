@@ -265,6 +265,11 @@ public class MainActivity extends AppCompatActivity {
 
 
             }
+
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
         });
 
         final Spinner filtre1 = findViewById(R.id.type_list_1);
@@ -280,12 +285,11 @@ public class MainActivity extends AppCompatActivity {
 
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                if (position == 0){
+                if (position == 0) {
 
                     listMonsters.setAdapter(adapter);
 
-                }
-                else {
+                } else {
 
                     for (int i = 0; i < monsterInfo.size(); i++) {
 
@@ -295,117 +299,117 @@ public class MainActivity extends AppCompatActivity {
                             filterList.add(monsterInfo.get(i));
 
 
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            public void onItemSelected (AdapterView < ? > parent, View view,
+                            int position, long id){
 
-                //Si "Choose an element", afficher liste entière, sinon appeler le filterAdapter
-                if (position == 0){
-                    listMonsters.setAdapter(adapter);
-                    listMonsters.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                        @Override
-                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long arg) {
-                            Parcelable eggModel = new MonsterModel(eggInfo.get(i).getName(),
-                                    eggInfo.get(i).getType(), eggInfo.get(i).getWeakness(),
-                                    eggInfo.get(i).getType2(), eggInfo.get(i).getWeakness2(),
-                                    eggInfo.get(i).getImage(), eggInfo.get(i).getStatHealth(),
-                                    eggInfo.get(i).getStatPower(), eggInfo.get(i).getStatSpeed(),
-                                    eggInfo.get(i).getStatStamina());
-                            Parcelable juvModel = new MonsterModel(juvInfo.get(i).getName(),
-                                    juvInfo.get(i).getType(), juvInfo.get(i).getWeakness(),
-                                    juvInfo.get(i).getType2(), juvInfo.get(i).getWeakness2(),
-                                    juvInfo.get(i).getImage(), juvInfo.get(i).getStatHealth(),
-                                    juvInfo.get(i).getStatPower(), juvInfo.get(i).getStatSpeed(),
-                                    juvInfo.get(i).getStatStamina());
-                            Parcelable childModel = new MonsterModel(childInfo.get(i).getName(),
-                                    childInfo.get(i).getType(), childInfo.get(i).getWeakness(),
-                                    childInfo.get(i).getType2(), childInfo.get(i).getWeakness2(),
-                                    childInfo.get(i).getImage(), childInfo.get(i).getStatHealth(),
-                                    childInfo.get(i).getStatPower(), childInfo.get(i).getStatSpeed(),
-                                    childInfo.get(i).getStatStamina());
-                            Parcelable adultModel = new MonsterModel(adultInfo.get(i).getName(),
-                                    adultInfo.get(i).getType(), adultInfo.get(i).getWeakness(),
-                                    adultInfo.get(i).getType2(), adultInfo.get(i).getWeakness2(),
-                                    adultInfo.get(i).getImage(), adultInfo.get(i).getStatHealth(),
-                                    adultInfo.get(i).getStatPower(), adultInfo.get(i).getStatSpeed(),
-                                    adultInfo.get(i).getStatStamina());
+                                //Si "Choose an element", afficher liste entière, sinon appeler le filterAdapter
+                                if (position == 0) {
+                                    listMonsters.setAdapter(adapter);
+                                    listMonsters.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long arg) {
+                                            Parcelable eggModel = new MonsterModel(eggInfo.get(i).getName(),
+                                                    eggInfo.get(i).getType(), eggInfo.get(i).getWeakness(),
+                                                    eggInfo.get(i).getType2(), eggInfo.get(i).getWeakness2(),
+                                                    eggInfo.get(i).getImage(), eggInfo.get(i).getStatHealth(),
+                                                    eggInfo.get(i).getStatPower(), eggInfo.get(i).getStatSpeed(),
+                                                    eggInfo.get(i).getStatStamina());
+                                            Parcelable juvModel = new MonsterModel(juvInfo.get(i).getName(),
+                                                    juvInfo.get(i).getType(), juvInfo.get(i).getWeakness(),
+                                                    juvInfo.get(i).getType2(), juvInfo.get(i).getWeakness2(),
+                                                    juvInfo.get(i).getImage(), juvInfo.get(i).getStatHealth(),
+                                                    juvInfo.get(i).getStatPower(), juvInfo.get(i).getStatSpeed(),
+                                                    juvInfo.get(i).getStatStamina());
+                                            Parcelable childModel = new MonsterModel(childInfo.get(i).getName(),
+                                                    childInfo.get(i).getType(), childInfo.get(i).getWeakness(),
+                                                    childInfo.get(i).getType2(), childInfo.get(i).getWeakness2(),
+                                                    childInfo.get(i).getImage(), childInfo.get(i).getStatHealth(),
+                                                    childInfo.get(i).getStatPower(), childInfo.get(i).getStatSpeed(),
+                                                    childInfo.get(i).getStatStamina());
+                                            Parcelable adultModel = new MonsterModel(adultInfo.get(i).getName(),
+                                                    adultInfo.get(i).getType(), adultInfo.get(i).getWeakness(),
+                                                    adultInfo.get(i).getType2(), adultInfo.get(i).getWeakness2(),
+                                                    adultInfo.get(i).getImage(), adultInfo.get(i).getStatHealth(),
+                                                    adultInfo.get(i).getStatPower(), adultInfo.get(i).getStatSpeed(),
+                                                    adultInfo.get(i).getStatStamina());
 
-                            intent.putExtra("EXTRA_PARCEL_EGG", eggModel);
-                            intent.putExtra("EXTRA_PARCEL_CHILD", childModel);
-                            intent.putExtra("EXTRA_PARCEL_JUV", juvModel);
-                            intent.putExtra("EXTRA_PARCEL_ADULT", adultModel);
-                            MainActivity.this.startActivity(intent);
+                                            intent.putExtra("EXTRA_PARCEL_EGG", eggModel);
+                                            intent.putExtra("EXTRA_PARCEL_CHILD", childModel);
+                                            intent.putExtra("EXTRA_PARCEL_JUV", juvModel);
+                                            intent.putExtra("EXTRA_PARCEL_ADULT", adultModel);
+                                            MainActivity.this.startActivity(intent);
 
+                                        }
+                                    });
+                                } else {
+                                    ListAdapter filterAdapter = new ListAdapter(MainActivity.this, filterListEgg);
+                                    filterListEgg.clear();
+                                    filterListChild.clear();
+                                    filterListJuv.clear();
+                                    filterListAdult.clear();
+                                    for (int i = 0; i < eggInfo.size(); i++) {
+                                        if (getResources().getResourceEntryName(eggInfo.get(i).getType()).toLowerCase()
+                                                .contains(filter1.getSelectedItem().toString().toLowerCase())) {
+                                            filterListEgg.add(eggInfo.get(i));
+                                            filterListChild.add(childInfo.get(i));
+                                            filterListJuv.add(juvInfo.get(i));
+                                            filterListAdult.add(adultInfo.get(i));
+
+                                        }
+                                    }
+
+                                    listMonsters.setAdapter(filterAdapter);
+
+
+                                }
+
+                                listMonsters.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                    @Override
+                                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long arg) {
+                                        Parcelable eggModel = new MonsterModel(filterListEgg.get(i).getName(),
+                                                filterListEgg.get(i).getType(), filterListEgg.get(i).getWeakness(),
+                                                filterListEgg.get(i).getType2(), filterListEgg.get(i).getWeakness2(),
+                                                filterListEgg.get(i).getImage(), filterListEgg.get(i).getStatHealth(),
+                                                filterListEgg.get(i).getStatPower(), filterListEgg.get(i).getStatSpeed(),
+                                                filterListEgg.get(i).getStatStamina());
+                                        Parcelable juvModel = new MonsterModel(filterListJuv.get(i).getName(),
+                                                filterListJuv.get(i).getType(), filterListJuv.get(i).getWeakness(),
+                                                filterListJuv.get(i).getType2(), filterListJuv.get(i).getWeakness2(),
+                                                filterListJuv.get(i).getImage(), filterListJuv.get(i).getStatHealth(),
+                                                filterListJuv.get(i).getStatPower(), filterListJuv.get(i).getStatSpeed(),
+                                                filterListJuv.get(i).getStatStamina());
+                                        Parcelable childModel = new MonsterModel(filterListChild.get(i).getName(),
+                                                filterListChild.get(i).getType(), filterListChild.get(i).getWeakness(),
+                                                filterListChild.get(i).getType2(), filterListChild.get(i).getWeakness2(),
+                                                filterListChild.get(i).getImage(), filterListChild.get(i).getStatHealth(),
+                                                filterListChild.get(i).getStatPower(), filterListChild.get(i).getStatSpeed(),
+                                                filterListChild.get(i).getStatStamina());
+                                        Parcelable adultModel = new MonsterModel(filterListAdult.get(i).getName(),
+                                                filterListAdult.get(i).getType(), filterListAdult.get(i).getWeakness(),
+                                                filterListAdult.get(i).getType2(), filterListAdult.get(i).getWeakness2(),
+                                                filterListAdult.get(i).getImage(), filterListAdult.get(i).getStatHealth(),
+                                                filterListAdult.get(i).getStatPower(), filterListAdult.get(i).getStatSpeed(),
+                                                filterListAdult.get(i).getStatStamina());
+                                        intent.putExtra("EXTRA_PARCEL_EGG", eggModel);
+                                        intent.putExtra("EXTRA_PARCEL_CHILD", childModel);
+                                        intent.putExtra("EXTRA_PARCEL_JUV", juvModel);
+                                        intent.putExtra("EXTRA_PARCEL_ADULT", adultModel);
+                                        MainActivity.this.startActivity(intent);
+                                    }
+                                });
+                            }
                         }
-                    });
-                }
-                else {
-                    ListAdapter filterAdapter = new ListAdapter(MainActivity.this, filterListEgg);
-                    filterListEgg.clear();
-                    filterListChild.clear();
-                    filterListJuv.clear();
-                    filterListAdult.clear();
-                    for (int i = 0; i < eggInfo.size(); i++) {
-                        if (getResources().getResourceEntryName(eggInfo.get(i).getType()).toLowerCase()
-                                .contains(filter1.getSelectedItem().toString().toLowerCase())) {
-                            filterListEgg.add(eggInfo.get(i));
-                            filterListChild.add(childInfo.get(i));
-                            filterListJuv.add(juvInfo.get(i));
-                            filterListAdult.add(adultInfo.get(i));
 
-                        }
+
+
+
                     }
-
-                    listMonsters.setAdapter(filterAdapter);
-
-
-                }
-
-                    listMonsters.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                        @Override
-                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long arg) {
-                            Parcelable eggModel = new MonsterModel(filterListEgg.get(i).getName(),
-                                    filterListEgg.get(i).getType(), filterListEgg.get(i).getWeakness(),
-                                    filterListEgg.get(i).getType2(), filterListEgg.get(i).getWeakness2(),
-                                    filterListEgg.get(i).getImage(), filterListEgg.get(i).getStatHealth(),
-                                    filterListEgg.get(i).getStatPower(), filterListEgg.get(i).getStatSpeed(),
-                                    filterListEgg.get(i).getStatStamina());
-                            Parcelable juvModel = new MonsterModel(filterListJuv.get(i).getName(),
-                                    filterListJuv.get(i).getType(), filterListJuv.get(i).getWeakness(),
-                                    filterListJuv.get(i).getType2(), filterListJuv.get(i).getWeakness2(),
-                                    filterListJuv.get(i).getImage(),filterListJuv.get(i).getStatHealth(),
-                                    filterListJuv.get(i).getStatPower(),filterListJuv.get(i).getStatSpeed(),
-                                    filterListJuv.get(i).getStatStamina());
-                            Parcelable childModel = new MonsterModel(filterListChild.get(i).getName(),
-                                    filterListChild.get(i).getType(), filterListChild.get(i).getWeakness(),
-                                    filterListChild.get(i).getType2(), filterListChild.get(i).getWeakness2(),
-                                    filterListChild.get(i).getImage(), filterListChild.get(i).getStatHealth(),
-                                    filterListChild.get(i).getStatPower(),filterListChild.get(i).getStatSpeed(),
-                                    filterListChild.get(i).getStatStamina());
-                            Parcelable adultModel = new MonsterModel(filterListAdult.get(i).getName(),
-                                    filterListAdult.get(i).getType(), filterListAdult.get(i).getWeakness(),
-                                    filterListAdult.get(i).getType2(), filterListAdult.get(i).getWeakness2(),
-                                    filterListAdult.get(i).getImage(), filterListAdult.get(i).getStatHealth(),
-                                    filterListAdult.get(i).getStatPower(), filterListAdult.get(i).getStatSpeed(),
-                                    filterListAdult.get(i).getStatStamina());
-                            intent.putExtra("EXTRA_PARCEL_EGG", eggModel);
-                            intent.putExtra("EXTRA_PARCEL_CHILD", childModel);
-                            intent.putExtra("EXTRA_PARCEL_JUV", juvModel);
-                            intent.putExtra("EXTRA_PARCEL_ADULT", adultModel);
-                            MainActivity.this.startActivity(intent);
-                        }
-                    });
                 }
             }
             @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
+            public void onNothingSelected (AdapterView < ? > adapterView){
 
             }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-
         });
     }
 }
-
