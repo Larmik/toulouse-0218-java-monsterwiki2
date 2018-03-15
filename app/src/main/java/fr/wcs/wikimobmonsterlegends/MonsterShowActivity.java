@@ -59,9 +59,9 @@ public class MonsterShowActivity extends MainActivity {
             MonsterModel toEgg = getIntent().getParcelableExtra("EXTRA_PARCEL_EGG");
             monsterName.setText(toEgg.getName());
             typePicture.setImageResource(toEgg.getType());
-            typePicture2.setImageResource(toEgg.getWeakness());
+            typePicture2.setImageResource(toEgg.getType2());
             monsterPicture.setImageResource(toEgg.getImage());
-            weaknessPicture.setImageResource(toEgg.getType2());
+            weaknessPicture.setImageResource(toEgg.getWeakness());
             weaknessPicture2.setImageResource(toEgg.getWeakness2());
             healthStat.setText(String.valueOf(toEgg.getStatHealth()));
             powerStat.setText(String.valueOf(toEgg.getStatPower()));
