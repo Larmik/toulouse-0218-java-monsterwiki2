@@ -28,6 +28,10 @@ public class SplashActivity extends AppCompatActivity {
     }
 
 
+<<<<<<< HEAD
 }
 
 
+=======
+}
+>>>>>>> master
