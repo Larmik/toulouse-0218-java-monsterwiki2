@@ -239,7 +239,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/imageView4"
-        android:paddingRight="10dp"
+        android:paddingEnd="100dp"
         android:paddingTop="20dp"
         android:text="Stats at Base Level 0"
         android:textAlignment="center"
