@@ -197,28 +197,30 @@
         android:textStyle="bold" />
 
     <ImageButton
-        android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:background="@android:color/transparent"
-        android:scaleX="0.8"
-        android:scaleY="0.8"
-        app:srcCompat="@drawable/evo_button" />
-
-    <ImageButton
         android:id="@+id/btn_previous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_next"
-        android:layout_alignStart="@+id/btn_next"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/monster_picture"
         android:background="@android:color/transparent"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
         android:rotation="180"
-        android:scaleX="0.8"
-        android:scaleY="0.8"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/evo_button" />
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:visibility="visible"
+        app:srcCompat="@drawable/next_button" />
+
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/linearLayout"
+        android:background="@android:color/transparent"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        app:srcCompat="@drawable/next_button" />
 
 
 </RelativeLayout>
