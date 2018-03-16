@@ -2,6 +2,8 @@ package fr.wcs.wikimobmonsterlegends;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -53,6 +55,14 @@ public class MonsterShowActivity extends MainActivity {
         final TextView speedStat = findViewById(R.id.stat_speed);
         final TextView staminaStat = findViewById(R.id.stat_stamina);
         final TextView monsterAge = findViewById(R.id.age);
+        final TextView lvlStat = findViewById(R.id.base_stat);
+
+        Animation anim = new AlphaAnimation(0.0f, 1.0f);
+        anim.setDuration(500); //You can manage the blinking time with this parameter
+        anim.setStartOffset(20);
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setRepeatCount(Animation.INFINITE);
+        lvlStat.startAnimation(anim);
 
         switch (mLevel) {
         case 0 :
@@ -68,6 +78,7 @@ public class MonsterShowActivity extends MainActivity {
             speedStat.setText(String.valueOf(toEgg.getStatSpeed()));
             staminaStat.setText(String.valueOf(toEgg.getStatStamina()));
             monsterAge.setText(R.string.egg);
+            lvlStat.setText(R.string.lvl0);
             previousEv.setVisibility(View.INVISIBLE);
             nextEv.setVisibility(View.VISIBLE);
             break;
@@ -84,6 +95,7 @@ public class MonsterShowActivity extends MainActivity {
             speedStat.setText(String.valueOf(toChild.getStatSpeed()));
             staminaStat.setText(String.valueOf(toChild.getStatStamina()));
             monsterAge.setText(R.string.child);
+            lvlStat.setText(R.string.lvl1);
             previousEv.setVisibility(View.VISIBLE);
             nextEv.setVisibility(View.VISIBLE);
             break;
@@ -100,6 +112,7 @@ public class MonsterShowActivity extends MainActivity {
             speedStat.setText(String.valueOf(toJuv.getStatSpeed()));
             staminaStat.setText(String.valueOf(toJuv.getStatStamina()));
             monsterAge.setText(R.string.juv);
+            lvlStat.setText(R.string.lvl4);
             previousEv.setVisibility(View.VISIBLE);
             nextEv.setVisibility(View.VISIBLE);
             break;
@@ -116,6 +129,12 @@ public class MonsterShowActivity extends MainActivity {
             speedStat.setText(String.valueOf(toAdult.getStatSpeed()));
             staminaStat.setText(String.valueOf(toAdult.getStatStamina()));
             monsterAge.setText(R.string.adult);
+            if (toAdult.getType2() == R.color.white)
+                lvlStat.setText(R.string.lvl7);
+            else if (toAdult.getType() == R.drawable.legend)
+                lvlStat.setText(R.string.lvl25);
+            else
+                lvlStat.setText(R.string.lvl10);
             previousEv.setVisibility(View.VISIBLE);
             nextEv.setVisibility(View.INVISIBLE);
             break;

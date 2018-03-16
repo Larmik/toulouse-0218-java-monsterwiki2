@@ -7,7 +7,18 @@
     android:layout_height="match_parent"
     android:clickable="false"
     android:orientation="vertical"
+    android:background="@color/back"
     tools:context="fr.wcs.wikimobmonsterlegends.MonsterShowActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="27dp"
+        android:alpha="0.2"
+        app:srcCompat="@drawable/background_app" />
 
     <TextView
         android:id="@+id/monster_name"
@@ -189,8 +200,8 @@
         android:id="@+id/stat_stamina"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_alignEnd="@+id/stat_speed"
-        android:layout_below="@+id/imageView3"
+        android:layout_alignStart="@+id/stat_speed"
+        android:layout_below="@+id/stat_speed"
         android:paddingTop="15dp"
         android:text="TextView"
         android:textSize="24sp"
@@ -212,6 +223,27 @@
         android:layout_alignParentEnd="true"
         android:text="Previous evolution"
         android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/base_stat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/imageView4"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp"
+        android:text="Stats at Base Level 0"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/base_stat"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/bannerfoot" />
 
 
 </RelativeLayout>

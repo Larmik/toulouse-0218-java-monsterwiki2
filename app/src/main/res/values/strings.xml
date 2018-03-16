@@ -6,4 +6,12 @@
     <string name="egg">Egg</string>
     <string name="child">Child</string>
     <string name="adult">Adult</string>
+    <string name="lvl1">Stats at Base Level 1</string>
+    <string name="lvl0">Stats at Base Level 0</string>
+    <string name="lvl4">Stats at Base Level 4</string>
+    <string name="lvl7">Stats at Base Level 7</string>
+    <string name="lvl10">Stats at Base Level 10</string>
+    <string name="lvl25">Stats at Base Level 25</string>
+
+
 </resources>
