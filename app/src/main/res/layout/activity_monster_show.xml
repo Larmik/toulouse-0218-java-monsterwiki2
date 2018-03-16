@@ -60,7 +60,7 @@
         android:layout_below="@+id/age"
         android:paddingTop="16dp"
         android:paddingRight="16dp"
-        >
+        android:id="@+id/linearLayout">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -207,22 +207,31 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_width="170dp"
-        android:layout_height="90dp"
-        android:layout_alignStart="@+id/btn_previous"
-        android:layout_below="@+id/btn_previous"
-        android:text="Next evolution" />
-
-    <Button
+    <ImageButton
         android:id="@+id/btn_previous"
-        android:layout_width="170dp"
-        android:layout_height="90dp"
-        android:layout_above="@+id/stat_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:text="Previous evolution"
-        android:visibility="invisible" />
+        android:layout_below="@+id/monster_picture"
+        android:background="@android:color/transparent"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:rotation="180"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:visibility="visible"
+        app:srcCompat="@drawable/next_button" />
+
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/linearLayout"
+        android:background="@android:color/transparent"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        app:srcCompat="@drawable/next_button" />
 
     <TextView
         android:id="@+id/base_stat"
