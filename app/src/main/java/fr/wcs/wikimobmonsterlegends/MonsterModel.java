@@ -4,8 +4,19 @@ package fr.wcs.wikimobmonsterlegends;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class MonsterModel implements Parcelable{
+public class MonsterModel implements Parcelable {
 
+    public static final Creator<MonsterModel> CREATOR = new Creator<MonsterModel>() {
+        @Override
+        public MonsterModel createFromParcel(Parcel in) {
+            return new MonsterModel(in);
+        }
+
+        @Override
+        public MonsterModel[] newArray(int size) {
+            return new MonsterModel[size];
+        }
+    };
     //Attributes
     private String name;
     private int type;
@@ -17,7 +28,6 @@ public class MonsterModel implements Parcelable{
     private int statPower;
     private int statSpeed;
     private int statStamina;
-
 
     //Constructor
     public MonsterModel(String name, int type, int type2, int weakness, int weakness2, int image,
@@ -37,7 +47,7 @@ public class MonsterModel implements Parcelable{
     protected MonsterModel(Parcel in) {
         name = in.readString();
         type = in.readInt();
-        type2= in.readInt();
+        type2 = in.readInt();
         weakness = in.readInt();
         weakness2 = in.readInt();
         image = in.readInt();
@@ -66,45 +76,42 @@ public class MonsterModel implements Parcelable{
         return 0;
     }
 
-    public static final Creator<MonsterModel> CREATOR = new Creator<MonsterModel>() {
-        @Override
-        public MonsterModel createFromParcel(Parcel in) {
-            return new MonsterModel(in);
-        }
-
-        @Override
-        public MonsterModel[] newArray(int size) {
-            return new MonsterModel[size];
-        }
-    };
-
     public String getName() {
         return name;
     }
+
     public int getType() {
         return type;
     }
+
     public int getType2() {
         return type2;
     }
+
     public int getWeakness() {
         return weakness;
     }
+
     public int getWeakness2() {
         return weakness2;
     }
+
     public int getImage() {
         return image;
     }
+
     public int getStatHealth() {
         return statHealth;
     }
+
     public int getStatPower() {
         return statPower;
     }
+
     public int getStatSpeed() {
         return statSpeed;
     }
+
     public int getStatStamina() {
         return statStamina;
     }

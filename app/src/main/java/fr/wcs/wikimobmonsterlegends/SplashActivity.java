@@ -1,9 +1,9 @@
 package fr.wcs.wikimobmonsterlegends;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent i = new Intent(SplashActivity.this,MainActivity.class);
+                Intent i = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();
 
@@ -26,7 +26,6 @@ public class SplashActivity extends AppCompatActivity {
 
         }, SPLASH_TIME_OUT);
     }
-
 
 
 }
