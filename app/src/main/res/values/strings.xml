@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">WikiMob Monster Legends</string>
     <string name="filter">Type/Element :</string>
-    <string name="textview">TextView</string>
     <string name="juv">Juvenile</string>
     <string name="egg">Egg</string>
     <string name="child">Child</string>
@@ -12,6 +11,6 @@
     <string name="lvl7">Stats at Base Level 7</string>
     <string name="lvl10">Stats at Base Level 10</string>
     <string name="lvl25">Stats at Base Level 25</string>
-
-
+    <string name="element">Element</string>
+    <string name="weakness">Weakness</string>
 </resources>

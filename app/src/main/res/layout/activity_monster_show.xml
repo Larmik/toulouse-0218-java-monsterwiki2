@@ -5,9 +5,9 @@
     android:id="@+id/monster_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/back"
     android:clickable="false"
     android:orientation="vertical"
-    android:background="@color/back"
     tools:context="fr.wcs.wikimobmonsterlegends.MonsterShowActivity">
 
     <ImageView
@@ -27,7 +27,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="12dp"
-        android:text="TextView"
+        tools:text="Title"
         android:textAlignment="center"
         android:textSize="36sp" />
 
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/monster_name"
         android:layout_centerHorizontal="true"
-        android:text="TextView"
+        tools:text="Subtitle"
         android:textSize="18sp" />
 
     <ImageView
@@ -51,16 +51,15 @@
         android:layout_marginTop="21dp"
         app:srcCompat="@mipmap/ic_launcher" />
 
-
     <LinearLayout
+        android:id="@+id/infos_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/age"
         android:gravity="right"
         android:orientation="horizontal"
-        android:layout_below="@+id/age"
-        android:paddingTop="16dp"
         android:paddingRight="16dp"
-        android:id="@+id/linearLayout">
+        android:paddingTop="16dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -75,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:text="Element"
+                android:text="@string/element"
                 android:textSize="18sp" />
 
             <LinearLayout
@@ -101,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:text="Weakness"
+                android:text="@string/weakness"
                 android:textSize="18sp" />
 
             <LinearLayout
@@ -126,7 +125,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_health"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/monster_picture"
@@ -136,29 +135,29 @@
         app:srcCompat="@drawable/life" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/iv_power"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/iv_health"
+        android:layout_below="@+id/iv_health"
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/power" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/iv_speed"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView2"
-        android:layout_below="@+id/imageView2"
+        android:layout_alignStart="@+id/iv_power"
+        android:layout_below="@+id/iv_power"
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/speed" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/iv_stamina"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView3"
-        android:layout_below="@+id/imageView3"
+        android:layout_alignStart="@+id/iv_speed"
+        android:layout_below="@+id/iv_speed"
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/stamina" />
 
@@ -168,9 +167,9 @@
         android:layout_height="50dp"
         android:layout_below="@+id/monster_picture"
         android:layout_marginStart="26dp"
-        android:layout_toEndOf="@+id/imageView"
+        android:layout_toEndOf="@+id/iv_health"
         android:paddingTop="15dp"
-        android:text="TextView"
+        tools:text="Health"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -181,7 +180,7 @@
         android:layout_alignStart="@+id/stat_health"
         android:layout_below="@+id/stat_health"
         android:paddingTop="15dp"
-        android:text="TextView"
+        tools:text="Power"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -192,7 +191,7 @@
         android:layout_alignStart="@+id/stat_power"
         android:layout_below="@+id/stat_power"
         android:paddingTop="15dp"
-        android:text="TextView"
+        tools:text="Speed"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -203,7 +202,7 @@
         android:layout_alignStart="@+id/stat_speed"
         android:layout_below="@+id/stat_speed"
         android:paddingTop="15dp"
-        android:text="TextView"
+        tools:text="Stamina"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -227,7 +226,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/linearLayout"
+        android:layout_below="@+id/infos_container"
         android:background="@android:color/transparent"
         android:scaleX="0.7"
         android:scaleY="0.7"
@@ -238,16 +237,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/imageView4"
+        android:layout_below="@+id/iv_stamina"
         android:paddingEnd="100dp"
         android:paddingTop="20dp"
-        android:text="Stats at Base Level 0"
+        android:text="@string/lvl0"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold|italic" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/iv_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/base_stat"
